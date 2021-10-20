@@ -8,20 +8,36 @@
 const firstname = prompt("Qual è il tuo nome?");
 const lastname = prompt("Qual è il tuo cognome?");
 const color = prompt("Qual è il tuo colore preferito?");
+const years = "21"
 
 console.log(firstname);
 console.log(lastname);
 console.log(color);
 
 
-const sommaDati = firstname + lastname + color;
+const sommaDati = firstname + lastname + color + years;
 
-console.log("somma dati:", sommaDati)
+console.log("somma dati:", sommaDati);
 
 
 
 const password = `
-La password generata è : ${firstname}${lastname}${color}21
+<p> La password generata è : ${firstname}${lastname}${color}${years}
+</p>
 `
 
 document.getElementById('password').innerHTML=password;
+
+
+
+let lunghezzaStringa = sommaDati.length;
+
+console.log(lunghezzaStringa);
+
+const lunghezzapsw =
+`
+<p> La lunghezza della password generata è : ${lunghezzaStringa} caratteri
+</p>
+`
+
+document.getElementById('lunghezzapsw').innerHTML=lunghezzapsw
